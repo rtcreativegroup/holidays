@@ -168,7 +168,7 @@ module Holidays
           end
 
           if date.between?(start_date, end_date)
-            holidays << {:date => date, :name => h[:name], :hide_date => h[:hide_date], :regions => h[:regions]}
+            holidays << {:date => date, :name => h[:name], :hide_date => h[:hide_date], :duration => h[:duration], :regions => h[:regions]}
           end
 
         end
@@ -317,9 +317,10 @@ private
     options.flatten!
     observed = options.delete(:observed) ? true : false
     informal = options.delete(:informal) ? true : false
-		hide_date = options.delete(:hide_date) ? true: false
+		hide_date = options.delete(:hide_date) ? true : false
     regions = parse_regions(options)
-    return regions, observed, informal, hide_date
+    duration = parse_regions(options)
+    return regions, observed, informal, hide_date, duration
   end
 
   # Check regions against list of supported regions and return an array of

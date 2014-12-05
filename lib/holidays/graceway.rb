@@ -4,7 +4,7 @@ module Holidays
   #
   # Definitions loaded: data/graceway.yaml
   #
-  # To use the definitions in this file, load it right after you load the 
+  # To use the definitions in this file, load it right after you load the
   # Holiday gem:
   #
   #   require 'holidays'
@@ -24,7 +24,7 @@ module Holidays
       2 => [{:wday => 0, :week => 2, :name => "Superbowl Sunday", :regions => [:graceway]},
             {:mday => 14, :name => "Valentine's Day", :regions => [:graceway]}],
       3 => [{:function => lambda { |year| Holidays.easter(year)-46 }, :function_id => "easter(year)-46", :name => "Ash Wednesday", :regions => [:graceway]},
-            {:function => lambda { |year| Holidays.easter(year)-46 }, :function_id => "easter(year)-46", :name => "Lent", :regions => [:graceway]},
+            {:function => lambda { |year| Holidays.easter(year)-46 }, :function_id => "easter(year)-46", :duration => 46, :name => "Lent", :regions => [:graceway]},
             {:wday => 0, :week => 2, :name => "Daylight Savings Begins", :regions => [:graceway]},
             {:mday => 17, :name => "St Patrick's Day", :regions => [:graceway]}],
       4 => [{:function => lambda { |year| Holidays.easter(year)-7 }, :function_id => "easter(year)-7", :name => "Palm Sunday", :regions => [:graceway]},
