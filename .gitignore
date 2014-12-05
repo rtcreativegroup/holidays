@@ -6,3 +6,6 @@ rdoc/
 Gemfile.lock
 .ruby-version
 .bundle
+
+# Aptana Project File
+.project
