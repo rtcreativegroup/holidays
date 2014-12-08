@@ -10,10 +10,10 @@ months:
   - name: Lent
     regions: [graceway]
     function: easter(year)-46
-    duration: 46
+    duration: 48
   - name: VBS
     regions: [graceway]
-    week: 2
+    week: 1
     wday: 0
     duration: 61
     hidedate: true
