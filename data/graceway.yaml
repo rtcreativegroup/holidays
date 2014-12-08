@@ -1,8 +1,16 @@
-# Graceay holiday definitions for the Ruby Holiday gem.
+# Graceway holiday definitions for the Ruby Holiday gem.
 #
 # Updated: 2014-05-08
 ---
 months:
+  0:
+  - name: Easter Sunday
+    regions: [graceway]
+    function: easter(year)
+  - name: Lent
+    regions: [graceway]
+    function: easter(year)-46
+    duration: 46
   1:
   - name: New Years
     regions: [graceway]
@@ -27,10 +35,6 @@ months:
   - name: Ash Wednesday
     regions: [graceway]
     function: easter(year)-46
-  - name: Lent
-    regions: [graceway]
-    function: easter(year)-46
-    duration: 46
   - name: Daylight Savings Begins
     regions: [graceway]
     week: 2
@@ -48,13 +52,6 @@ months:
   - name: Good Friday
     regions: [graceway]
     function: easter(year)-2
-  - name: Lent
-    regions: [graceway]
-    function: easter(year)-46
-    duration: 46
-  - name: Easter Sunday
-    regions: [graceway]
-    function: easter(year)
   5:
   - name: National Day of Prayer
     regions: [graceway]
@@ -84,6 +81,11 @@ months:
   - name: Trinity Sunday
     regions: [graceway]
     function: easter(year)+57
+  - name: VBS
+    regions: [graceway]
+    week: 2
+    wday: 0
+    hidedate: true
   7:
   - name: Independence Day
     regions: [graceway]
