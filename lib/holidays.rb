@@ -319,8 +319,7 @@ private
     informal = options.delete(:informal) ? true : false
 		hide_date = options.delete(:hide_date) ? true : false
     regions = parse_regions(options)
-    duration = parse_regions(options)
-    return regions, observed, informal, hide_date, duration
+    return regions, observed, informal, hide_date
   end
 
   # Check regions against list of supported regions and return an array of

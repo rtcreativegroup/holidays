@@ -30,6 +30,7 @@ module Holidays
       4 => [{:function => lambda { |year| Holidays.easter(year)-7 }, :function_id => "easter(year)-7", :name => "Palm Sunday", :regions => [:graceway]},
             {:function => lambda { |year| Holidays.easter(year)-5 }, :function_id => "easter(year)-5", :name => "Passover", :regions => [:graceway]},
             {:function => lambda { |year| Holidays.easter(year)-2 }, :function_id => "easter(year)-2", :name => "Good Friday", :regions => [:graceway]},
+            {:function => lambda { |year| Holidays.easter(year)-46 }, :function_id => "easter(year)-46", :duration => 46, :name => "Lent", :regions => [:graceway]},
             {:function => lambda { |year| Holidays.easter(year) }, :function_id => "easter(year)", :name => "Easter Sunday", :regions => [:graceway]}],
       5 => [{:wday => 4, :week => 1, :name => "National Day of Prayer", :regions => [:graceway]},
             {:wday => 0, :week => 2, :name => "Mothers Day", :regions => [:graceway]},

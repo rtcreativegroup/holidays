@@ -48,6 +48,10 @@ months:
   - name: Good Friday
     regions: [graceway]
     function: easter(year)-2
+  - name: Lent
+    regions: [graceway]
+    function: easter(year)-46
+    duration: 46
   - name: Easter Sunday
     regions: [graceway]
     function: easter(year)
