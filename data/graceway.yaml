@@ -11,6 +11,12 @@ months:
     regions: [graceway]
     function: easter(year)-46
     duration: 46
+  - name: VBS
+    regions: [graceway]
+    week: 2
+    wday: 0
+    duration: 61
+    hidedate: true
   1:
   - name: New Years
     regions: [graceway]
@@ -81,20 +87,10 @@ months:
   - name: Trinity Sunday
     regions: [graceway]
     function: easter(year)+57
-  - name: VBS
-    regions: [graceway]
-    week: 2
-    wday: 0
-    hidedate: true
   7:
   - name: Independence Day
     regions: [graceway]
     mday: 4
-  - name: VBS
-    regions: [graceway]
-    week: 2
-    wday: 0
-    hidedate: true
   8:
   - name: Back to School
     regions: [graceway]
