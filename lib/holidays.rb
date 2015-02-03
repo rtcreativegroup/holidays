@@ -273,28 +273,23 @@ module Holidays
     a = (12 * year + 17) % 19
     b = year % 4
     m = const_m0 + const_K * a +  b / 4.0 - const_L * year
-    m-- if m < 0
+    m = m - 1 if m < 0
     const_M = m;
     m++ if (m < 0)
           m -= const_M;
     case (const_M + 3 * year + 5 * b + 5) % 7
     when 0
       break if (a <= 11 || m < const_m1)
-      const_M++
-      break
+      const_M = const_M + 1
     when 1
       break if (a <= 6 || m < const_m2)
       const_M += 2
-      break
     when 2
-      const_M++
-      break
+      const_M = const_M + 1
     when 4
-      const_M++
-      break
+      const_M = const_M + 1
     when 6
-      const_M++
-      break
+      const_M = const_M + 1
     end
 
     #Convert to Gregorian Calendar
