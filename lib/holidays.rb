@@ -275,8 +275,8 @@ module Holidays
     m = const_m0 + const_K * a +  b / 4.0 - const_L * year
     m = m - 1 if m < 0
     const_M = m;
-    m++ if (m < 0)
-          m -= const_M;
+    m = m + 1 if (m < 0)
+    m -= const_M;
     case (const_M + 3 * year + 5 * b + 5) % 7
     when 0
       break if (a <= 11 || m < const_m1)
