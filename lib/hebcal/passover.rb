@@ -32,8 +32,6 @@ module HebCal
 
       pesach = Time.new(yearG, pesach_month, 1) + (pesach_day - 1) * 24 * 60 * 60
       pesach = pesach.dst? ? pesach - 60 * 60 : pesach
-
-      Date.new(pesach)
     end
   end
 end
