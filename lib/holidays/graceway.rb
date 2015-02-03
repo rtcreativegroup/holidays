@@ -21,7 +21,7 @@ module Holidays
               1 => [{:mday => 1, :name => "New Years", :regions => [:graceway]},
             {:wday => 1, :week => 3, :name => "Martin Luther King Jr", :regions => [:graceway]},
             {:wday => 0, :week => 3, :name => "Sanctity of Life Week", :regions => [:graceway]}],
-      2 => [{:wday => 0, :week => 2, :name => "Superbowl Sunday", :regions => [:graceway]},
+      2 => [{:wday => 0, :week => 1, :name => "Superbowl Sunday", :regions => [:graceway]},
             {:mday => 14, :name => "Valentine's Day", :regions => [:graceway]}],
       3 => [{:function => lambda { |year| Holidays.easter(year)-46 }, :function_id => "easter(year)-46", :name => "Ash Wednesday", :regions => [:graceway]},
             {:function => lambda { |year| Holidays.easter(year)-46 }, :function_id => "easter(year)-46", :name => "Lent", :regions => [:graceway]},
