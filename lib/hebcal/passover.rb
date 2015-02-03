@@ -3,7 +3,7 @@ require 'hebcal/passoverHelper'
 
 module HebCal
   module Passover
-    def WhenIsPesach yearG
+    def Passover.WhenIsPesach yearG
       _HPD = PassoverConstants::HALAKIM_PER_DAY
       _MZ = PassoverConstants::MOLAD_ZAQEN
 
