@@ -3,6 +3,7 @@ $:.unshift File.dirname(__FILE__)
 
 require 'digest/md5'
 require 'date'
+require 'hebcal/passover'
 
 # == Region options
 # Holidays can be defined as belonging to one or more regions and sub regions.
@@ -260,6 +261,13 @@ module Holidays
 
   # A method to calculate the date of the first day of Passover
   def self.passover_start(year)
+    HebCal::Passover.WhenIsPesach(year)
+
+
+
+
+
+=begin
     #Basic constants
     const_T = (33.0 + 14.0 / 24.0)
     const_L = ((1.0  + 485.0 / 1080.0) / 24.0 / 19.0)
@@ -292,6 +300,7 @@ module Holidays
 
     #Convert to Gregorian Calendar
     return const_M += (year - 3760) / 100 - (year-3760) / 400 - 2
+=end
   end
 
   # Move date to Monday if it occurs on a Sunday.
