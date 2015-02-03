@@ -261,8 +261,9 @@ module Holidays
 
   # A method to calculate the date of the first day of Passover
   def self.passover_start(year)
-    HebCal::Passover::WhenIsPesach(year)
-
+    passover = HebCal::Passover::WhenIsPesach(year)
+    date = Date.civil(passover.to_date)
+    date -= 1
 
 
 
