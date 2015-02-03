@@ -264,45 +264,6 @@ module Holidays
     passover = HebCal::Passover::WhenIsPesach(year)
     date = Date.civil(passover.to_date.year, passover.to_date.month, passover.to_date.day)
     date -= 1
-
-
-
-
-
-=begin
-    #Basic constants
-    const_T = (33.0 + 14.0 / 24.0)
-    const_L = ((1.0  + 485.0 / 1080.0) / 24.0 / 19.0)
-    const_K = ((29.0 + (12.0 + 793.0 / 1080.0) / 24.0 )/ 19.0)
-
-    # Derived constants
-    const_m0 = (const_T - 10.0 * const_K + const_L + 14.0)
-    const_m1 = ((21.0 + 589.0 / 1080.0) / 24.0)
-    const_m2 = ((15.0 + 204.0 / 1080.0) / 24.0)
-
-    a = (12 * year + 17) % 19
-    b = year % 4
-    m = const_m0 + const_K * a +  b / 4.0 - const_L * year
-    m = m - 1 if (m < 0)
-    const_M = m;
-    m = m + 1 if (m < 0)
-    m -= const_M;
-    case (const_M + 3 * year + 5 * b + 5) % 7
-    when 0
-      const_M = const_M + 1 unless (a <= 11 || m < const_m1)
-    when 1
-      const_M += 2 unless (a <= 6 || m < const_m2)
-    when 2
-      const_M = const_M + 1
-    when 4
-      const_M = const_M + 1
-    when 6
-      const_M = const_M + 1
-    end
-
-    #Convert to Gregorian Calendar
-    return const_M += (year - 3760) / 100 - (year-3760) / 400 - 2
-=end
   end
 
   # Move date to Monday if it occurs on a Sunday.
